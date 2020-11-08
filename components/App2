@@ -1,0 +1,10 @@
+import React {useState} from 'react';
+import ReactDOM from 'react-dom';
+
+  let storeEnhancer=applyMiddleware(thunk);
+ReactDOM.render(
+    <Provider store={createStore(reducers,storeEnhancer)}>
+    <App/>
+    </Provider>,
+    document.querySelector("#root")
+);
